@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- TextView for the bio -->
+        <TextView
+            android:id="@+id/textview_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/bio_text"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Hobbies Button with added space between buttons -->
+        <Button
+            android:id="@+id/button_hobbies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hobbies_button"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintTop_toBottomOf="@id/textview_bio"
+            app:layout_constraintEnd_toStartOf="@id/button_contact"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Contact Button with added space between buttons -->
+        <Button
+            android:id="@+id/button_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_button"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="16dp"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintTop_toBottomOf="@id/textview_bio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_hobbies" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
